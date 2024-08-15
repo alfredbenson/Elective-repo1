@@ -46,7 +46,7 @@ html{
 }
 /*  The Home Section*/
 
-#home{
+.home{
      display: flex;
     flex-direction: column;
     height: 840px;
@@ -55,7 +55,7 @@ html{
     color: black;
     
 }
-#home::before{
+.home::before{
     content: "";
     position: absolute;
     top: 0;
@@ -104,67 +104,65 @@ html{
     margin-bottom: -40px;
 }
 
+}/*Fonts of all headings*/
+.headings {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3rem;
+    text-align: center;
+    margin: 40px 0px;
+    color: orangered;
+    
+    
 }
 /* Personal Information*/
 
 .info-section {
+    flex-direction: column;
     background-color: black;
     padding: 20px;
-    border-radius: box;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
+    max-width: 100%;
     margin: 0 auto;
     display: flex;
-    
-    
-  }
 
-  .info-section h1 {
-    font-size: 24px;
-    color: white;
-    margin-bottom: 10px;
-    text-align: center;
-    
   }
-
-  .info-list {
+  .info{
     list-style-type: none;
     padding: 0;
   }
-
-  .info-list li {
+  .info li {
     font-size: 50px;
-    color: #555;
+    color: orange;
     padding: 10px 0;
-    border-bottom: 1px solid #ddd;
-    
   }
-
-  .info-list li:last-child {
+  .info li:last-child {
     border-bottom: none;
   }
-
-  .info-list span {
+  .info span {
     font-weight: bold;
     color: #333;
   }
+.info img{
+    margin-top: 50px;
+    left: 5%;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition */
+}
+.info img:hover{
+    transform: scale(1.1);
+    opacity: 1;
+    cursor: pointer;
+    box-shadow: 0 0 30px green, 0 0 30px, 0 0 15px green;
+
+}
 
 /* Education Section*/
-.headings{
-    font-size: 8rem;
-    text-align: center;
-    margin: 5rem 0;
-    
 
-}
 .education{
     padding: 50px;
-    background: wheat;
-   
-    
+    background: wheat; 
 }
-
-
 .timeline-items{
     max-width: 1200px;
     margin: auto;
@@ -246,42 +244,9 @@ html{
     font-weight: 300;
     line-height: 22px;
 }
-::-webkit-scrollbar{
-    width: 15px;
-}
-::-webkit-scrollbar-thumb{
-    background-color: var(--main-color);
-}
-::-webkit_scrollbar-track{
-    background-color: var(--bg-color);
-    width: 50px;
-}
 
-
-.headings {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow ', sans-serif;
-    font-size: 3rem;
-    text-align: center;
-    margin: 40px 0px;
-}
-.button {
-    padding: 10px 35px;
-    background-color: transparent;
-    border: 1px solid lightblue;
-    color: black;
-    outline: none;
-    transition: .6s ease;
-}
-.button:hover {
-    cursor: pointer;
-    background-color: wheat;
-    color: black;
-    box-shadow: 0 0 5px whitesmoke, 0 0 10px, 0 0 15px white;
-    font-weight: bold;
-
-}
 /* Profile Section */
-#profiles {
+.profiles {
     display: flex;
     flex-direction: column;
     background-color: rgba(0, 0, 0, 0.8);
@@ -292,13 +257,8 @@ html{
     
 }
 
-.headings {
-   
-    text-align: center;
-    height: 200px;
-    
-}
-#PROFILE img {
+
+.PROFILE img {
     
     margin-top: 20px;
     border-radius: 5%;
@@ -306,14 +266,24 @@ html{
     transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition */
 }
 
-#PROFILE img:hover {
+.PROFILE img:hover {
     transform: scale(1.1);
     opacity: 0.8;
     cursor: pointer;
     box-shadow: 0 0 30px green, 0 0 30px, 0 0 15px green;
 }
+.heading {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3rem;
+    text-align: center;
+    margin: 40px 0px;
+    color: black;
+    
+    
+}
 /* Experiences Section*/ 
-#experiences {
+
+.experiences {
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -359,7 +329,7 @@ html{
 
 }
 /* Contact Section */
-#contact{
+.contact{
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
@@ -368,30 +338,4 @@ html{
     padding: 20px;
     
 }
-.form{
-    display: flex;
-    flex-direction: column;        
-    box-sizing: border-box;
-    align-items: center;
-    margin: 20px 0px;
-    
-}
-.input{
-    padding: 12px;
-    margin: 15px;
-    width: 30%;
-    border: none;
-    outline: none;
 
-}
-#msg{
-    width: 20%;
-    padding: 10px;
-    margin: 15px;
-    border: none;
-    outline: none;
-}
-#send:hover{
-    cursor: pointer;
-    box-shadow: 0 0 10px white;
-}
